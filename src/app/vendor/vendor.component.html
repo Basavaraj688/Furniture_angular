@@ -1,0 +1,29 @@
+<table class="table">
+    <thead class="disabled ">
+      <tr>
+        <!-- <th scope="col">ID</th> -->
+        <th scope="col">Employee ID</th>
+        <th scope="col">Employee Email</th>
+        <th scope="col">Furniture</th>
+        <th scope="col">Equipment</th>
+        <th scope="col">Address</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Emp of data">
+        <!-- <td>{{Emp.id}}</td> -->
+        <td>{{Emp.employee_id}}</td>
+        <td>{{Emp.employee_mail}}</td>
+        <td>{{Emp.furniture}}</td>
+        <td>{{Emp.iT_Equipment}}</td>
+        <td>{{Emp.address}}</td>
+        <td>
+            <form action="" [formGroup]="dateform">
+                <input type="Date" class="form-control" name="" id="" name="DelivaryDate" formControlName="DelivaryDate" >
+            </form>
+        </td>
+        <td><button class="btn btn-primary" (click)="senddate(Emp.id)">Submit</button></td>
+      </tr>
+    </tbody>
+  </table>

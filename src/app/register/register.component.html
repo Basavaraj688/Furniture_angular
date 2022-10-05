@@ -1,0 +1,197 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img
+        src="../assets/sammy-girl-updates-the-system-settings-of-the-computer.png"
+        alt=""
+        width="400px"
+        height="500px"
+      />
+    </div>
+    <div class="col-md-6">
+        <div class="backdrop">
+            <form class="regform"  [formGroup]="addForm" (ngSubmit)="addUser()">
+                <div class="form-group row">
+                  <label for="inputUsername" class="col-sm-2 col-form-label"
+                    >UserName</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="User Name"
+                      name="userName"
+                      formControlName="userName"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Email"
+                      name="email"
+                      formControlName="email"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword" class="col-sm-2 col-form-label"
+                    >password
+                  </label>
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Password"
+                      name="password"
+                      formControlName="password"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputFirstname" class="col-sm-2 col-form-label"
+                    >Firstname</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Firstname"
+                      name="Firstname"
+                      formControlName="Firstname"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inpuTastname" class="col-sm-2 col-form-label"
+                    >Lastname</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Lastname"
+                      name="Lastname"
+                      formControlName="Lastname"
+                    />
+                  </div>
+                </div>
+                <button class="btn btn-primary float-right">Submit</button>
+            </form>
+        </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="forms-container">
+    <div class="signin-signup">
+      
+      <form class="regform" [formGroup]="addForm" (ngSubmit)="addUser()">
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input
+            type="text"
+            class="form-control"
+            placeholder="User Name"
+            name="userName"
+            formControlName="userName"
+            required />
+        
+        </div>
+        <span *ngIf="userName?.invalid" style="color: #5995fd;">user name is required</span>
+        
+          <!-- <label for="inputEmail" class="col-sm-2 col-form-label">Email</label> -->
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Email"
+              name="email"
+              formControlName="email"
+            />
+          </div>
+          <span *ngIf="email?.invalid" style="color: #5995fd;">user name is required</span>
+
+          <div class="input-field">
+            <i class="fa fa-snowflake-o"></i>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Enter Password"
+              name="password"
+              formControlName="password"
+            />
+          </div>
+
+          <span *ngIf="password?.invalid" style="color: #5995fd;">password name is required</span>
+
+          <div class="input-field">
+            <i class="fa fa-snowflake-o"></i>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="confirm Password"
+              name="conpassword"
+              formControlName="conpassword"
+            />
+          </div>
+        <span *ngIf="conpassword?.invalid" style="color:#5995fd ;">Confirm the password</span>
+
+          
+          <span  style="color: #5995fd;">{{errmsg}}</span>
+       
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Firstname"
+              name="Firstname"
+              formControlName="Firstname"
+            />
+          </div>
+
+          <span *ngIf="Firstname?.invalid" style="color: #5995fd;">First name is required</span>
+          
+    
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Lastname"
+              name="Lastname"
+              formControlName="Lastname"
+            />
+          </div>
+
+          <span *ngIf="Lastname?.invalid" style="color: #5995fd;">Last name is required</span>
+        
+        <button class="btn btn-primary float-right">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="panels-container">
+    
+    <div class="panel left-panel">
+      
+      <div class="content">
+        <div *ngIf="alert" class="alert alert-success" role="alert">
+          This is a success alert—check it out!
+        </div>
+        <h3>Register</h3>
+        <p>
+          If you already have an account sign in by clicking below
+        </p>
+        <button class="btn transparent" id="sign-up-btn" routerLink="/Login">Sign in</button>
+      </div>
+      <img src="../assets/register.svg" class="image" alt="" />
+    </div>
+  </div>
+</div>

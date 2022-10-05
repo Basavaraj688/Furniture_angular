@@ -1,0 +1,33 @@
+.btn-submit
+{
+    margin: 10px;
+    background-color: white;
+    color: #0172f4;
+    border-radius: 20px;
+}
+.navbar
+{
+    background-color: #0172f4;
+}
+.logo
+{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px;
+    letter-spacing:0.15em;
+}
+.logo:hover()
+{
+    color: white;
+}
+.links
+{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
+    font-family:'Rubik', sans-serif;
+    font-weight:400;
+}

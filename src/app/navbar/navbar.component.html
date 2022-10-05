@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <!-- <a class="logo" href="#">PACKMORE</a> -->
+    <a href="" routerLink="Home"><h3 class="logo">PACKMORE</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class=" links" routerLink="Home" *ngIf="this.auth.isLoggeIn()" >Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class=" links" href="#" *ngIf="this.auth.isLoggeIn()">Contact Us<span class="sr-only" >(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <!-- <button  *ngIf="!this.auth.isLoggeIn()" class="btn btn-submit my-2 " type="submit" routerLink="Register">Register</button>
+        <button  *ngIf="!this.auth.isLoggeIn()" class="btn btn-submit my-2" type="submit" routerLink="Login">Login</button> -->
+        <button *ngIf="this.auth.isLoggeIn()" type="button" class="btn btn-submit" (click)="logout()" >Logout</button>
+      </form>
+    </div>
+  </nav>

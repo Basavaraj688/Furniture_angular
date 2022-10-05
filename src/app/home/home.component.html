@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="row" id="homediv">
+    <div class="col-md-6 col-12">
+      <img
+        class="homeimg"
+        src="../assets/Furniture store-amico blue.svg"
+        class="image"
+        alt=""
+      />
+    </div>
+    <div class="Text col-md-6">
+      <div class="Qoute">
+        <h1>PACKMORE</h1>
+        <h3>
+          
+          India's Happiest Home Store: A Thumbprint Against Standardization
+        </h3>
+      </div>
+      <div class="para">
+        <p>
+          The work of many heads, hearts, and hands, we're a creative Home Décor
+          & Furnishings Store. We design with joy, no pretense, and dollops of
+          relevance. Our collections marry form with functionality. Explore
+          modern lifestyle furniture, upholstery & curtain fabrics, lighting &
+          accessories, and unique ceramics & tableware for your home
+        </p>
+      </div>
+      <div class="buttons">
+        <form class="form-inline my-2 my-lg-0">
+          <button  *ngIf="!this.auth.isLoggeIn()" class="btn btn-submit my-2 " type="submit" routerLink="/Register">Register</button>
+          <button  *ngIf="!this.auth.isLoggeIn()" class="btn btn-submit my-2" type="submit" routerLink="/Login">Login</button>
+          <!-- <button *ngIf="this.auth.isLoggeIn()" type="button" class="btn btn-submit" (click)="logout()" >Logout</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

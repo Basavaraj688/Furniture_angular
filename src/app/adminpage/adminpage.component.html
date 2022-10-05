@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-2">
+
+  </div>
+<div class="col-md-8">
+    <table class="table">
+        <thead class="disabled ">
+          <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Employee Email</th>
+            <th scope="col">Furniture</th>
+            <th scope="col">Equipment</th>
+            <th scope="col">Address</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Emp of Requests">
+            <td>{{Emp.employee_id}}</td>
+            <td>{{Emp.employee_mail}}</td>
+            <td>{{Emp.furniture}}</td>
+            <td>{{Emp.iT_Equipment}}</td>
+            <td>{{Emp.address}}</td>
+            <td>{{Emp.status}}</td>
+            <td>
+                <button class="btn btn-success" (click)="approve(Emp.id,Emp)">Approve</button>&nbsp;
+                <button class="btn btn-danger" (click)="reject(Emp.id,Emp)">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+ <div class="col-md-2">
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+

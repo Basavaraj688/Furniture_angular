@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="addp col-md-4">
+    <h3 style="color: #ffffff"><b>Requirement Page</b></h3>
+
+    <form action="" [formGroup]="regForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="Name">Employee Id</label>
+
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Employee ID"
+          name="Employee_id"
+          formControlName="Employee_id"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+
+        <input
+          type="email"
+          class="form-control"
+          id="productname"
+          placeholder="Email"
+          name="Employee_mail"
+          formControlName="Employee_mail"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="inputState">Furniture</label>
+        <select
+          id="inputState"
+          class="form-control"
+          name="Furniture"
+          formControlName="Furniture"
+        >
+          <!-- <option selected>Choose...</option> -->
+          <option value="chair">chair</option>
+          <option value="Table">Table</option>
+          <option value="Water bottle">Water Bottle</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="inputState">IT-Equipment</label>
+        <select
+          id="inputState"
+          class="form-control"
+          name="IT_Equipment"
+          formControlName="IT_Equipment"
+        >
+          <!-- <option selected>Choose...</option> -->
+          <option value="Mouse">Mouse</option>
+          <option value="Keyboard">Keyboard</option>
+          <option value="Monitor">Monitor</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Name">Shipping Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Shipping Address"
+          name="Address"
+          formControlName="Address"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div class="col-md-4">
+    <!-- <button class="btn btn-Primary" routerLink="Myrequest" style="margin-top:20px;">Myrequests</button> -->
+    <h4>Below enter your Employee id and Check your requests </h4>
+    <div class="form-group">
+      <form action="" [formGroup]="idform" (ngSubmit)="myrequest()">
+        <label for="Name">Employee Id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Employee ID"
+          name="empid"
+          formControlName="empid"
+        />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col md-2">
+  </div>
+  <div class="col md-8">
+    <table class="table">
+      <thead class="disabled ">
+        <tr>
+          <th scope="col">Employee ID</th>
+          <th scope="col">Employee Email</th>
+          <th scope="col">Furniture</th>
+          <th scope="col">Equipment</th>
+          <th scope="col">Address</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Emp of emprequests">
+          <td>{{Emp.employee_id}}</td>
+          <td>{{Emp.employee_mail}}</td>
+          <td>{{Emp.furniture}}</td>
+          <td>{{Emp.iT_Equipment}}</td>
+          <td>{{Emp.address}}</td>
+          <td>{{Emp.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col md-2"></div>
+  
+</div>

@@ -1,1 +1,33 @@
-<p>myrequest works!</p>
+
+<div class="row">
+    <div class="col-md-2">
+        <button class="btn btn-primary" style="margin-top: 20px;" routerLink="/Employee">New Request</button>
+    </div>
+  <div class="col-md-8">
+      <table class="table">
+          <thead class="disabled ">
+            <tr>
+              <th scope="col">Employee ID</th>
+              <th scope="col">Employee Email</th>
+              <th scope="col">Furniture</th>
+              <th scope="col">Equipment</th>
+              <th scope="col">Address</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Emp of  requestdata">
+              <td>{{Emp.employee_id}}</td>
+              <td>{{Emp.employee_mail}}</td>
+              <td>{{Emp.furniture}}</td>
+              <td>{{Emp.iT_Equipment}}</td>
+              <td>{{Emp.address}}</td>
+              <td>{{Emp.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+   <div class="col-md-2">
+      
+    </div>
+  </div>

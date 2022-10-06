@@ -1,5 +1,7 @@
 <div class="row">
-  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <button class="btn btn-primary" style="margin-top: 20px;" routerLink="/Myrequest">My Requests</button>
+  </div>
   <div class="addp col-md-4">
     <h3 style="color: #ffffff"><b>Requirement Page</b></h3>
 
@@ -74,25 +76,14 @@
   </div>
   <div class="col-md-4">
     <!-- <button class="btn btn-Primary" routerLink="Myrequest" style="margin-top:20px;">Myrequests</button> -->
-    <h4>Below enter your Employee id and Check your requests </h4>
+    
     <div class="form-group">
-      <form action="" [formGroup]="idform" (ngSubmit)="myrequest()">
-        <label for="Name">Employee Id</label>
-        <input
-          type="text"
-          class="form-control"
-          id="name"
-          placeholder="Employee ID"
-          name="empid"
-          formControlName="empid"
-        />
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    
     </div>
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
 
   <div class="col md-2">
   </div>
@@ -122,4 +113,4 @@
   </div>
   <div class="col md-2"></div>
   
-</div>
+</div> -->

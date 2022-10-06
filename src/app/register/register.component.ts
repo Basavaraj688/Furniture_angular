@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
    {
     this.reg.RegisterUser(this.addForm.value).subscribe((res)=>{ 
       console.log(res);
-      alert("Registered sucessfully");
+      // alert("Registered sucessfully");
      
     })
     this.alert=true;

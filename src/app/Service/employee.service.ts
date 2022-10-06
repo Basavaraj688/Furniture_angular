@@ -12,8 +12,8 @@ export class EmployeeService {
     return this.http.post('https://localhost:44367/api/EmployeReq', data);
   }
 
-  myrequests(id:number)
+  myrequests(email:any)
   {
-    return this.http.get(`https://localhost:44367/myrequests/${id}`)
+    return this.http.get(`https://localhost:44367/emprequest/${email}`)
   }
 }

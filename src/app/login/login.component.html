@@ -65,7 +65,7 @@
       <div class="signin-signup">
              <form [formGroup]="LoginForm" (ngSubmit)="LoginUser()">
             <div class="input-field">
-            <i class="fas fa-user"></i>
+            <i class="fa fa-user-o"></i>
             <input
             type="text"
             class="form-control"
@@ -74,9 +74,10 @@
             formControlName="userName"
             />
             </div>
+            <span *ngIf="userName?.invalid" style="color: red;">user name is required</span>
             
             <div class="input-field">
-            <i class="fas fa-envelope"></i>
+            <i class="fa fa-envelope-o"></i>
             <input
             type="text"
             class="form-control"
@@ -85,7 +86,7 @@
             formControlName="email"
             />
             </div>
-
+            <span *ngIf="email?.invalid" style="color: red;">Email is required</span>
             <div class="input-field">
             <i class="fa fa-snowflake-o"></i>
             <input
@@ -96,11 +97,11 @@
             formControlName="password"
             />
             </div>
-            <button class="btn btn-primary float-right">Submit</button>
+            <span *ngIf="password?.invalid" style="color: red;">Enter the password</span>
+            <button class="btn btn-primary float-right">Sign In</button>
             </form>
       </div>
    </div>
-
 
   <div class="panels-container">
     <div class="panel left-panel">

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -10,40 +11,31 @@ export class AuthService {
 
   getDetail(){
     const userDetails = JSON.parse(localStorage.getItem('userdetails')!);
-
     if (userDetails){
       return userDetails;
     }
   }
 
-  // isuserlogin()
-  // {
-  //   const userDetails = JSON.parse(localStorage.getItem('userdetails')!);
-  //   console.log(userDetails)
-  //   if(userDetails.role=="Employee")
-  //   {
-  //     return true
-  //   }
-  //   else
-  //   {
-  //     return false
-  //   }
-
-  // }
   
+
   isLoggeIn() {
-    if (this.getDetail()) {
+    if (this.getDetail()){
       return true;
     } else {
       return false;
     }
   }
 
+
   logout() {
-    const confiramation = confirm('are you want to logout');
-    if (confiramation) {
+    const confirmation = confirm('are you want to logout');
+    
+    if (confirmation) {
       localStorage.clear();
       this.router.navigate(['Home']);
+      // window.location.reload();
     }
   }
+
+  
 }

@@ -13,7 +13,7 @@
         <h1>PACKMORE</h1>
         <h3>
           
-          India's Happiest Home Store: A Thumbprint Against Standardization
+          India's Happiest Store: A Thumbprint Against Standardization
         </h3>
       </div>
       <div class="para">
@@ -27,8 +27,8 @@
       </div>
       <div class="buttons">
         <form class="form-inline my-2 my-lg-0">
-          <button  *ngIf="!this.auth.isLoggeIn()" class="btn btn-submit my-2 " type="submit" routerLink="/Register">Register</button>
-          <button  *ngIf="!this.auth.isLoggeIn()" class="btn btn-submit my-2" type="submit" routerLink="/Login">Login</button>
+          <button  *ngIf="!this.auth.isLoggeIn()" class="btn btn-submit reg " type="submit" routerLink="/Register">Register</button>
+          <button  *ngIf="!this.auth.isLoggeIn()" class="btn btn-submit log" type="submit" routerLink="/Login">Login</button>
           <!-- <button *ngIf="this.auth.isLoggeIn()" type="button" class="btn btn-submit" (click)="logout()" >Logout</button> -->
         </form>
       </div>

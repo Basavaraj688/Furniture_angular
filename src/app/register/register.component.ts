@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { RegisterService } from '../Service/register.service';
 
 
@@ -59,6 +60,12 @@ export class RegisterComponent implements OnInit {
     this.reg.RegisterUser(this.addForm.value).subscribe((res)=>{ 
       console.log(res);
       // alert("Registered sucessfully");
+      Swal.fire({  
+        icon: 'success',  
+        title: 'Registered succefully',  
+        showConfirmButton: false,  
+        timer: 2000  
+      })
      
     })
     this.alert=true;

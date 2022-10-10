@@ -92,7 +92,7 @@
       
       <form class="regform" [formGroup]="addForm" (ngSubmit)="addUser()">
         <div class="input-field">
-            <i class="fas fa-user"></i>
+            <i class="fa fa-user-o"></i>
             <input
             type="text"
             class="form-control"
@@ -102,11 +102,11 @@
             required />
         
         </div>
-        <span *ngIf="userName?.invalid" style="color: #5995fd;">user name is required</span>
+        <span *ngIf="userName?.invalid" style="color: red;">user name is required</span>
         
           <!-- <label for="inputEmail" class="col-sm-2 col-form-label">Email</label> -->
           <div class="input-field">
-            <i class="fas fa-envelope"></i>
+            <i class="fa fa-envelope-o"></i>
             <input
               type="text"
               class="form-control"
@@ -115,7 +115,7 @@
               formControlName="email"
             />
           </div>
-          <span *ngIf="email?.invalid" style="color: #5995fd;">user name is required</span>
+          <span *ngIf="email?.invalid" style="color: red;">Email is required</span>
 
           <div class="input-field">
             <i class="fa fa-snowflake-o"></i>
@@ -128,7 +128,7 @@
             />
           </div>
 
-          <span *ngIf="password?.invalid" style="color: #5995fd;">password name is required</span>
+          <span *ngIf="password?.invalid" style="color: red;">Enter the password</span>
 
           <div class="input-field">
             <i class="fa fa-snowflake-o"></i>
@@ -140,13 +140,13 @@
               formControlName="conpassword"
             />
           </div>
-        <span *ngIf="conpassword?.invalid" style="color:#5995fd ;">Confirm the password</span>
+        <span *ngIf="conpassword?.invalid" style="color:red ;">Confirm the password</span>
 
           
           <span  style="color: #5995fd;">{{errmsg}}</span>
        
           <div class="input-field">
-            <i class="fas fa-user"></i>
+            <i class="fa fa-user-o"></i>
             <input
               type="text"
               class="form-control"
@@ -156,11 +156,11 @@
             />
           </div>
 
-          <span *ngIf="Firstname?.invalid" style="color: #5995fd;">First name is required</span>
+          <span *ngIf="Firstname?.invalid" style="color: red;">First name is required</span>
           
     
           <div class="input-field">
-            <i class="fas fa-user"></i>
+            <i class="fa fa-user-o"></i>
             <input
               type="text"
               class="form-control"
@@ -170,9 +170,9 @@
             />
           </div>
 
-          <span *ngIf="Lastname?.invalid" style="color: #5995fd;">Last name is required</span>
+          <span *ngIf="Lastname?.invalid" style="color: red;">Last name is required</span>
         
-        <button class="btn btn-primary float-right">Submit</button>
+        <button class="btn btn-primary float-right">Sign Up</button>
       </form>
     </div>
   </div>

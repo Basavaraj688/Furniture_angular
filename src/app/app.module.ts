@@ -16,8 +16,10 @@ import { MyrequestComponent } from './myrequest/myrequest.component';
 
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { ToastrModule } from 'ngx-toastr';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+                          
 
 @NgModule({
   declarations: [
@@ -32,13 +34,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MyrequestComponent,
   ],
   imports: [
-    // NgToastModule,
+   
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

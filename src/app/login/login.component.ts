@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { LoginService } from '../Service/login.service';
 
 @Component({
@@ -17,9 +18,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
    LoginForm = new FormGroup({
-    userName: new FormControl(),
-    email: new FormControl(),
-    password: new FormControl(),
+    userName: new FormControl("",[Validators?.required]),
+    email: new FormControl("",[Validators?.required]),
+    password: new FormControl("",[Validators?.required]),
 
   })
 
@@ -63,6 +64,12 @@ export class LoginComponent implements OnInit {
         }
       }
       console.log(res)
+      Swal.fire({  
+        // position: 'top-end', 
+        icon: 'success',  
+        title: 'Thank You For loginigin',  
+        text: 'Login successfully',  
+      })  
       console.log(res.role)
     })
     // console.log(this.LoginForm.value)

@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^13.3.11",
+    "@angular/animations": "^14.2.5",
     "@angular/common": "~13.3.0",
     "@angular/compiler": "~13.3.0",
     "@angular/core": "~13.3.0",
@@ -21,9 +21,8 @@
     "@fortawesome/angular-fontawesome": "^0.10.2",
     "@fortawesome/fontawesome-svg-core": "~1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "ng-angular-popup": "^0.2.0",
-    "ngx-toastr": "^15.2.0",
     "rxjs": "~7.5.0",
+    "sweetalert2": "^11.4.38",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

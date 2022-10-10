@@ -57,15 +57,48 @@ p{
     display: flex;
     flex-direction: row;
 }
-.icons{
-    color: white;
-    margin-left: 280px;
-    letter-spacing: 2em;
-    margin-top: 20px;
-    font-size: 25px;
-}
+
 .Text.col-md-6 {
     margin-top: 80px;
+}
+.buttons
+{
+    margin-top: 40px;
+}
+
+.buttons .reg
+{
+    height: 40px;
+    width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    box-shadow: 0px 8px 15px blue;
+    outline: none;
+}
+
+.buttons .reg:hover,
+.reg:focus
+{
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+.buttons .log
+{
+    height: 40px;
+    width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    box-shadow: 0px 8px 15px blue;
+    outline: none;
+}
+
+.buttons .log:hover,
+.log:focus
+{
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
 }
 
 @media (max-width: 870px) 
